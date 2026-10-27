@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tHELALAUKAN — Toko Ikan guppy</title>
+  <style>
+    :root {
+      --biru: #087e8b;
+      --biru-gelap: #07545c;
+      --toska: #e9fbf8;
+      --teks: #203638;
+      --putih: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--teks);
+      background: #f7fcfb;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--putih);
+      padding: 14px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 2px 12px #00000012;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--biru-gelap);
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: var(--toska);
+      border-radius: 50%;
+      font-size: 25px;
+    }
+
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+
+    nav a {
+      color: var(--teks);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: var(--biru); }
+
+    .hero {
+      padding: 85px 7%;
+      text-align: center;
+      color: white;
+      background: linear-gradient(rgba(0, 60, 65, 0.45), rgba(0, 60, 65, 0.45)),
+            url("poto/gambar1.jpeg") center/cover no-repeat;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 8px;
+      background: var(--biru);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero .button {
+      background: rgb(0, 0, 0);
+      color: var(--biru-gelap);
+    }
+
+    section { padding: 58px 7%; }
+
+    .section-title {
+      text-align: center;
+      margin: 0 0 10px;
+      color: var(--biru-gelap);
+      font-size: 2rem;
+    }
+
+    .section-intro {
+      text-align: center;
+      margin: 0 auto 30px;
+      max-width: 650px;
+    }
+
+    .fish-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .fish-card {
+      overflow: hidden;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 5px 18px #07545c16;
+    }
+
+    .fish-card img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: var(--toska);
+    }
+
+    .fish-info { padding: 18px; }
+
+    .fish-info h3 {
+      margin: 0 0 8px;
+      color: var(--biru-gelap);
+    }
+
+    .price {
+      color: #0c29ce;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .fish-info .button { margin-top: 8px; }
+
+    .about {
+      background: var(--toska);
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 760px;
+      margin: 12px auto;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .map {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 14px;
+      margin-top: 16px;
+    }
+
+    footer {
+      padding: 22px 7%;
+      background: var(--biru-gelap);
+      color: white;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px; }
+      .hero { padding: 65px 6%; }
+    }
+    .logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="#beranda">
+      <img src="poto/lauk.jpg" class="logo-img" alt="The_Lalaukan">
+      <span>The_Lalaukan</span>
+    </a>
+
+    <nav aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a>
+      <a href="#koleksi">Koleksi Guppy</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#lokasi">Lokasi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <h1>Guppy Cantik, Akuarium Makin Menarik!</h1>
+      <p>
+        Temukan ikan guppy pilihan dengan warna memukau dan perawatan yang mudah.
+        Cocok untuk pemula maupun penghobi ikan hias.
+      </p>
+      <a class="button" href="#koleksi">Lihat Koleksi</a>
+    </section>
+
+    <section id="koleksi">
+      <h2 class="section-title">Koleksi Ikan Guppy</h2>
+      <p class="section-intro">
+        Pilih guppy favorit Anda. Klik tombol pembelian untuk melihat produk di TikTok Shop.
+      </p>
+
+      <div class="fish-grid">
+        <article class="fish-card">
+          <img src="poto/gambare.jpeg"
+               alt="Ikan guppy berwarna cerah di dalam akuarium">
+          <div class="fish-info">
+            <h3>Guppy PRTDE</h3>
+            <p>Guppy dengan warna biru metalik yang menawan. Aktif, mudah dirawat, dan cocok untuk akuarium komunitas.</p>
+            <p class="price">Mulai Rp25.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beuli di tiktok
+            </a>
+          </div>
+        </article>
+
+        <article class="fish-card">
+          <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=900&q=80"
+               alt="Ikan hias guppy dengan ekor berwarna-warni">
+          <div class="fish-info">
+            <h3>Guppy Red Dragon</h3>
+            <p>Memiliki corak merah menyala dan ekor lebar. Pilihan menarik untuk menjadi pusat perhatian di akuarium.</p>
+            <p class="price">Mulai Rp30.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beli di TikTok
+            </a>
+          </div>
+        </article>
+
+        <article class="fish-card">
+          <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=900&q=80"
+               alt="Ikan guppy kecil berenang di akuarium">
+          <div class="fish-info">
+            <h3>Guppy Cobra</h3>
+            <p>Corak tubuh menyerupai kulit ular dengan kombinasi warna unik. Ideal untuk penghobi yang menyukai motif eksotis.</p>
+            <p class="price">Mulai Rp20.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beli di TikTok
+            </a>
+          </div>
+        </article>
+
+        <article class="fish-card">
+          <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80"
+               alt="Ikan hias berwarna cerah di dalam air">
+          <div class="fish-info">
+            <h3>Guppy Koi</h3>
+            <p>Perpaduan warna merah, putih, dan hitam yang khas. Setiap ikan memiliki pola warna yang berbeda.</p>
+            <p class="price">Mulai Rp35.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beli di TikTok
+            </a>
+          </div>
+        </article>
+
+        <article class="fish-card">
+          <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=900&q=80"
+               alt="Ikan hias guppy dengan ekor berwarna-warni">
+          <div class="fish-info">
+            <h3>Guppy Red Dragon</h3>
+            <p>Memiliki corak merah menyala dan ekor lebar. Pilihan menarik untuk menjadi pusat perhatian di akuarium.</p>
+            <p class="price">Mulai Rp30.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beli di TikTok
+            </a>
+          </div>
+        </article>
+
+        <article class="fish-card">
+          <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=900&q=80"
+               alt="Ikan hias guppy dengan ekor berwarna-warni">
+          <div class="fish-info">
+            <h3>Guppy Red Dragon</h3>
+            <p>Memiliki corak merah menyala dan ekor lebar. Pilihan menarik untuk menjadi pusat perhatian di akuarium.</p>
+            <p class="price">Mulai Rp30.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beli di TikTok
+            </a>
+          </div>
+        </article>
+
+        <article class="fish-card">
+          <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=900&q=80"
+               alt="Ikan hias guppy dengan ekor berwarna-warni">
+          <div class="fish-info">
+            <h3>Guppy Red Dragon</h3>
+            <p>Memiliki corak merah menyala dan ekor lebar. Pilihan menarik untuk menjadi pusat perhatian di akuarium.</p>
+            <p class="price">Mulai Rp30.000</p>
+            <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
+              Beli di TikTok
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about" id="tentang">
+      <h2 class="section-title">Tentang Guppy Paradise</h2>
+      <p>
+        Kami menyediakan ikan guppy pilihan yang dirawat dengan baik. Kami juga siap membantu
+        memberikan saran dasar tentang pakan, kualitas air, dan perawatan akuarium.
+      </p>
+
+      <div class="contact-links">
+        <!-- Ganti URL berikut dengan akun toko Anda -->
+        <a class="button" href="https://www.tiktok.com/@username_toko" target="_blank" rel="noopener">
+          TikTok Kami
+        </a>
+        <a class="button" href="https://shopee.co.id/username_toko" target="_blank" rel="noopener">
+          Toko Shopee
+        </a>
+      </div>
+    </section>
+
+    <section id="lokasi">
+      <h2 class="section-title">Kunjungi Toko Kami</h2>
+      <p class="section-intro">Silakan ganti peta di bawah dengan lokasi toko Anda.</p>
+
+      <!-- Contoh peta Jakarta. Ganti q=Jakarta dengan alamat toko Anda. -->
+      <iframe
+        class="map"
+        src="https://maps.google.com/maps?q=Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Peta lokasi toko Guppy Paradise">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Guppy Paradise. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>
