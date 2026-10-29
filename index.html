@@ -4,35 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THELALAUKAN — Toko Ikan Guppy</title>
+
   <style>
     :root {
       --biru: #087e8b;
       --biru-gelap: #07545c;
-      --toska: #e9fbf8;
-      --teks: #203638;
-      --putih: #fff;
+      --teks: #eaf6ff;
+      --putih: #ffffff;
+      --kartu: #101a2b;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: var(--teks);
-      background: #f7fcfb;
+      background: linear-gradient(135deg, #05070d, #08264a);
       line-height: 1.6;
     }
 
     header {
-      background: var(--putih);
+      background: #ffffff;
       padding: 14px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      box-shadow: 0 2px 12px #00000012;
+      box-shadow: 0 2px 12px #00000030;
       position: sticky;
       top: 0;
       z-index: 5;
@@ -48,21 +53,11 @@
       text-decoration: none;
     }
 
+    /* Logo ikan tetap menggunakan gambar aslinya */
     .logo-img {
       width: 42px;
       height: 42px;
       object-fit: contain;
-      vertical-align: middle;
-    }
-
-    .logo-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      background: var(--toska);
-      border-radius: 50%;
-      font-size: 25px;
     }
 
     nav {
@@ -72,12 +67,14 @@
     }
 
     nav a {
-      color: var(--teks);
+      color: #203638;
       text-decoration: none;
       font-weight: 600;
     }
 
-    nav a:hover { color: var(--biru); }
+    nav a:hover {
+      color: var(--biru);
+    }
 
     .hero {
       padding: 85px 7%;
@@ -109,17 +106,14 @@
       font-weight: bold;
     }
 
-    .hero .button {
-      background: #087e8b;
-      color: white;
+    section {
+      padding: 58px 7%;
     }
-
-    section { padding: 58px 7%; }
 
     .section-title {
       text-align: center;
       margin: 0 0 10px;
-      color: var(--biru-gelap);
+      color: #71c7ff;
       font-size: 2rem;
     }
 
@@ -137,9 +131,11 @@
 
     .fish-card {
       overflow: hidden;
-      background: white;
+      background: var(--kartu);
+      color: var(--teks);
+      border: 1px solid #ffffff18;
       border-radius: 14px;
-      box-shadow: 0 5px 18px #07545c16;
+      box-shadow: 0 5px 18px #00000050;
     }
 
     .fish-card img {
@@ -147,26 +143,30 @@
       width: 100%;
       height: 210px;
       object-fit: cover;
-      background: var(--toska);
+      background: #14263f;
     }
 
-    .fish-info { padding: 18px; }
+    .fish-info {
+      padding: 18px;
+    }
 
     .fish-info h3 {
       margin: 0 0 8px;
-      color: var(--biru-gelap);
+      color: #71c7ff;
     }
 
     .price {
-      color: #0c29ce;
+      color: #7dd3fc;
       font-weight: bold;
       font-size: 1.1rem;
     }
 
-    .fish-info .button { margin-top: 8px; }
+    .fish-info .button {
+      margin-top: 8px;
+    }
 
     .about {
-      background: var(--toska);
+      background: #0a1930;
       text-align: center;
     }
 
@@ -193,7 +193,7 @@
 
     footer {
       padding: 22px 7%;
-      background: var(--biru-gelap);
+      background: #050b16;
       color: white;
       text-align: center;
     }
@@ -204,14 +204,18 @@
         flex-direction: column;
       }
 
-      nav { gap: 12px; }
+      nav {
+        gap: 12px;
+      }
 
-      .hero { padding: 65px 6%; }
+      .hero {
+        padding: 65px 6%;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <a class="logo" href="#beranda">
       <img src="lauk.jpg" class="logo-img" alt="Logo The_Lalaukan">
@@ -248,11 +252,10 @@
           <div class="fish-info">
             <h3>Guppy PRTDE</h3>
             <p>
-              Ikan guppy jenis PRTDE adalah guppy hias yang dikenal karena warna,
-              corak, dan bentuk siripnya yang menarik. Ciri setiap ikan dapat
-              berbeda, tergantung garis keturunan dan standar strain yang digunakan.
-              Seperti guppy lainnya, ikan ini relatif mudah dipelihara, tetapi tetap
-              membutuhkan air bersih, pakan bergizi, dan kondisi akuarium yang stabil.
+              Ikan guppy jenis PRTDE dikenal karena warna, corak, dan bentuk
+              siripnya yang menarik. Setiap ikan dapat memiliki tampilan berbeda.
+              Jaga air tetap bersih, berikan pakan bergizi, dan pertahankan
+              kondisi akuarium yang stabil.
             </p>
             <p class="price">Rp25.000/Pasang</p>
             <a class="button" href="https://vt.tokopedia.com/t/ZS9yME7LKdDKv-EraHm/" target="_blank" rel="noopener">
@@ -266,10 +269,9 @@
           <div class="fish-info">
             <h3>Guppy Black Moscow</h3>
             <p>
-              Ikan guppy Black Moscow terkenal dengan tubuh dan sirip berwarna
-              hitam pekat yang elegan. Warna gelapnya membuat ikan ini tampak
-              menonjol di akuarium. Ikan ini relatif mudah dipelihara asalkan
-              mendapat air bersih, pakan bergizi, serta lingkungan yang stabil.
+              Guppy Black Moscow terkenal dengan tubuh dan sirip berwarna hitam
+              pekat yang elegan. Pelihara dengan air bersih, pakan bergizi,
+              dan lingkungan akuarium yang stabil.
             </p>
             <p class="price">Rp13.000/Pasang</p>
             <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
@@ -283,10 +285,9 @@
           <div class="fish-info">
             <h3>Guppy Blue Dragon</h3>
             <p>
-              Ikan guppy Blue Dragon memiliki warna biru cerah dengan corak sisik
-              menyerupai naga yang tampak menawan. Perpaduan warna dan siripnya
-              membuat ikan ini menjadi daya tarik di akuarium. Jaga air tetap
-              bersih, suhu stabil, dan berikan pakan bergizi.
+              Guppy Blue Dragon memiliki warna biru cerah dengan corak sisik
+              menyerupai naga. Jaga air tetap bersih, suhu stabil, dan berikan
+              pakan bergizi.
             </p>
             <p class="price">Mulai Rp30.000/Pasang</p>
             <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
@@ -297,7 +298,7 @@
 
         <article class="fish-card">
           <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80"
-               alt="Ikan hias berwarna cerah di dalam air">
+               alt="Ikan guppy Koi">
           <div class="fish-info">
             <h3>Guppy Koi</h3>
             <p>
@@ -316,10 +317,8 @@
           <div class="fish-info">
             <h3>Guppy Albino Koi</h3>
             <p>
-              Ikan guppy Albino Koi memiliki perpaduan warna putih atau krem
-              dengan corak merah dan jingga yang menyerupai ikan koi. Matanya
-              yang kemerahan menjadi ciri khas albino. Pelihara di akuarium
-              dengan air bersih, suhu stabil, dan pakan bergizi.
+              Memiliki perpaduan warna putih atau krem dengan corak merah dan
+              jingga. Mata kemerahan menjadi salah satu ciri khas albino.
             </p>
             <p class="price">Rp20.000/Pasang</p>
             <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
@@ -334,10 +333,9 @@
           <div class="fish-info">
             <h3>Guppy HB White</h3>
             <p>
-              Ikan guppy HB White memiliki tubuh berwarna putih keperakan
-              dengan corak halus yang memberi kesan bersih dan elegan. Ikan ini
-              cocok dipelihara di akuarium terawat, dengan air bersih, suhu
-              stabil, dan pakan bergizi.
+              Guppy HB White memiliki tubuh putih keperakan dengan corak halus
+              yang terlihat bersih dan elegan. Pelihara di air bersih dengan
+              suhu stabil dan pakan bergizi.
             </p>
             <p class="price">Mulai Rp30.000</p>
             <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
@@ -348,12 +346,12 @@
 
         <article class="fish-card">
           <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=900&q=80"
-               alt="Ikan guppy dengan ekor berwarna-warni">
+               alt="Ikan guppy Red Dragon">
           <div class="fish-info">
             <h3>Guppy Red Dragon</h3>
             <p>
-              Memiliki corak merah menyala dan ekor lebar. Pilihan menarik
-              untuk menjadi pusat perhatian di akuarium.
+              Memiliki corak merah menyala dan ekor lebar, cocok menjadi daya
+              tarik di dalam akuarium.
             </p>
             <p class="price">Mulai Rp30.000</p>
             <a class="button" href="https://www.tiktok.com/shop" target="_blank" rel="noopener">
@@ -400,6 +398,5 @@
   <footer>
     <p>&copy; 2026 Guppy Paradise. Semua hak dilindungi.</p>
   </footer>
-
 </body>
 </html>
